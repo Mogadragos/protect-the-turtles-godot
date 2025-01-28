@@ -1,10 +1,10 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://7f6ykoy6ljnn"]
 
-[ext_resource type="StyleBox" uid="uid://beqvywk248708" path="res://UI/style_box_button_hover_focus.tres" id="1_v54yy"]
-[ext_resource type="Texture2D" uid="uid://cfklo160w1eo3" path="res://UI/volume-full-icon.svg" id="2_osuau"]
-[ext_resource type="StyleBox" uid="uid://dlx1sx115dubd" path="res://UI/style_box_flat_button.tres" id="2_xy7qg"]
-[ext_resource type="Texture2D" uid="uid://drlhy4wbidjfn" path="res://UI/volume-muted-icon.svg" id="3_wo3ne"]
-[ext_resource type="FontFile" uid="uid://b114062mtf3rj" path="res://UI/BaksoSapi.otf" id="4_j3qgc"]
+[ext_resource type="StyleBox" uid="uid://beqvywk248708" path="res://Assets/UI/style_box_button_hover_focus.tres" id="1_v54yy"]
+[ext_resource type="Texture2D" uid="uid://cfklo160w1eo3" path="res://Assets/UI/volume-full-icon.svg" id="2_osuau"]
+[ext_resource type="StyleBox" uid="uid://dlx1sx115dubd" path="res://Assets/UI/style_box_flat_button.tres" id="2_xy7qg"]
+[ext_resource type="Texture2D" uid="uid://drlhy4wbidjfn" path="res://Assets/UI/volume-muted-icon.svg" id="3_wo3ne"]
+[ext_resource type="FontFile" uid="uid://b114062mtf3rj" path="res://Assets/UI/BaksoSapi.otf" id="4_j3qgc"]
 
 [resource]
 default_font = ExtResource("4_j3qgc")

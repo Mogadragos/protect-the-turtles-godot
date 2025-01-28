@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfklo160w1eo3"
-path="res://.godot/imported/volume-full-icon.svg-7f65ec463ad84f8bbccf90de0fbfd199.ctex"
+uid="uid://bykoapgltsh7d"
+path="res://.godot/imported/black-instagram-icon.svg-854549c522f0db1fd14d062c4a5ad54b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/volume-full-icon.svg"
-dest_files=["res://.godot/imported/volume-full-icon.svg-7f65ec463ad84f8bbccf90de0fbfd199.ctex"]
+source_file="res://Assets/UI/black-instagram-icon.svg"
+dest_files=["res://.godot/imported/black-instagram-icon.svg-854549c522f0db1fd14d062c4a5ad54b.ctex"]
 
 [params]
 

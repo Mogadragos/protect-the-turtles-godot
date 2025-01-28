@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4ei4n50af5b"]
 
-[ext_resource type="Theme" uid="uid://7f6ykoy6ljnn" path="res://UI/theme.tres" id="1_graht"]
+[ext_resource type="Theme" uid="uid://7f6ykoy6ljnn" path="res://Assets/UI/theme.tres" id="1_graht"]
 [ext_resource type="Script" path="res://Scripts/play_menu.gd" id="1_njtoq"]
 
 [node name="PlayMenu" type="Control"]

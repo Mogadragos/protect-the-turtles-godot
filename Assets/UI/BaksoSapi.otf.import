@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://b114062mtf3rj"
-path="res://.godot/imported/BaksoSapi.otf-46b69117a5b4379bbed72950c8de07f8.fontdata"
+path="res://.godot/imported/BaksoSapi.otf-7ab3bd2ccd23d96f565a1b76949b7fd8.fontdata"
 
 [deps]
 
-source_file="res://UI/BaksoSapi.otf"
-dest_files=["res://.godot/imported/BaksoSapi.otf-46b69117a5b4379bbed72950c8de07f8.fontdata"]
+source_file="res://Assets/UI/BaksoSapi.otf"
+dest_files=["res://.godot/imported/BaksoSapi.otf-7ab3bd2ccd23d96f565a1b76949b7fd8.fontdata"]
 
 [params]
 
