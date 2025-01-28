@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c38auob0yomn4"]
+[gd_scene load_steps=4 format=3 uid="uid://c38auob0yomn4"]
 
 [ext_resource type="Theme" uid="uid://7f6ykoy6ljnn" path="res://UI/theme.tres" id="1_8o5rv"]
+[ext_resource type="Script" path="res://Scripts/credits_menu.gd" id="1_ha1vv"]
 [ext_resource type="Texture2D" uid="uid://bykoapgltsh7d" path="res://UI/black-instagram-icon.svg" id="2_wtfiu"]
 
 [node name="CreditsMenu" type="Control"]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ha1vv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -205,3 +207,5 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 theme = ExtResource("1_8o5rv")
 text = "Menu"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/MenuButton" to="." method="_on_menu_button_pressed"]

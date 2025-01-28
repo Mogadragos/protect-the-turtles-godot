@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxds0kpdhjwqk"]
+[gd_scene load_steps=3 format=3 uid="uid://bxds0kpdhjwqk"]
 
+[ext_resource type="Script" path="res://Scripts/options_menu.gd" id="1_3mmi8"]
 [ext_resource type="Theme" uid="uid://7f6ykoy6ljnn" path="res://UI/theme.tres" id="1_ikhgt"]
 
 [node name="OptionsMenu" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3mmi8")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -81,3 +83,5 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 theme = ExtResource("1_ikhgt")
 text = "Menu"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/MenuButton" to="." method="_on_menu_button_pressed"]

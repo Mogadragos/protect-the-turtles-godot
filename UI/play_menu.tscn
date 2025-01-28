@@ -1,14 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4ei4n50af5b"]
+[gd_scene load_steps=3 format=3 uid="uid://b4ei4n50af5b"]
 
 [ext_resource type="Theme" uid="uid://7f6ykoy6ljnn" path="res://UI/theme.tres" id="1_graht"]
+[ext_resource type="Script" path="res://Scripts/play_menu.gd" id="1_njtoq"]
 
-[node name="OptionsMenu" type="Control"]
+[node name="PlayMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_njtoq")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -78,3 +80,5 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 theme = ExtResource("1_graht")
 text = "Menu"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/MenuButton" to="." method="_on_menu_button_pressed"]
