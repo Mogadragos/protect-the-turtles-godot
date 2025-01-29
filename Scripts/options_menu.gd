@@ -1,8 +1,8 @@
 extends Control
 
 func _ready() -> void:
-	$MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/MusicButton.set_pressed_no_signal(!SoundFx.music_muted)
-	$MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/SfxButton.set_pressed_no_signal(!SoundFx.sfx_muted)
+	$MarginContainer/VBoxContainer/Audio/VBoxContainer/MusicButton.set_pressed_no_signal(!SoundFx.music_muted)
+	$MarginContainer/VBoxContainer/Audio/VBoxContainer/SfxButton.set_pressed_no_signal(!SoundFx.sfx_muted)
 
 #region Buttons control
 
