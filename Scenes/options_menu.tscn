@@ -68,7 +68,7 @@ layout_mode = 2
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="SoundsButton" type="CheckButton" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2"]
+[node name="SfxButton" type="CheckButton" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2"]
 layout_mode = 2
 theme = ExtResource("1_ikhgt")
 text = "         Sounds"
@@ -84,4 +84,6 @@ layout_mode = 2
 theme = ExtResource("1_ikhgt")
 text = "Menu"
 
+[connection signal="toggled" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/MusicButton" to="." method="_on_music_button_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/SfxButton" to="." method="_on_sfx_button_toggled"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/MenuButton" to="." method="_on_menu_button_pressed"]

@@ -11,8 +11,10 @@ script = ExtResource("1_of4y3")
 
 [node name="ButtonClick" type="AudioStreamPlayer" parent="V1"]
 stream = ExtResource("3_1dc4k")
+bus = &"SFX"
 
 [node name="V2" type="Node" parent="."]
 
 [node name="ButtonClick" type="AudioStreamPlayer" parent="V2"]
 stream = ExtResource("2_kq5ym")
+bus = &"SFX"
