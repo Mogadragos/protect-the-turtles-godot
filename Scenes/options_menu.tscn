@@ -51,39 +51,25 @@ theme_override_constants/margin_right = 300
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 6
+theme_override_constants/separation = 40
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="MusicButton" type="CheckButton" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer"]
+[node name="MusicButton" type="CheckButton" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_ikhgt")
 text = "        Music"
 alignment = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="SfxButton" type="CheckButton" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2"]
+[node name="SfxButton" type="CheckButton" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_ikhgt")
 text = "         Sounds"
 alignment = 1
 
-[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="MenuButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3"]
+[node name="MenuButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_ikhgt")
 text = "Menu"
 
-[connection signal="toggled" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/MusicButton" to="." method="_on_music_button_toggled"]
-[connection signal="toggled" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/SfxButton" to="." method="_on_sfx_button_toggled"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MusicButton" to="." method="_on_music_button_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/SfxButton" to="." method="_on_sfx_button_toggled"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
