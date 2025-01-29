@@ -11,11 +11,11 @@ func _on_menu_button_pressed() -> void:
 	SoundFx.button_click()
 
 func _on_music_button_toggled(toggled_on: bool) -> void:
-	SoundFx.toggle_music(toggled_on)
+	SoundFx.mute_music(!toggled_on)
 	SoundFx.button_click()
 
 func _on_sfx_button_toggled(toggled_on: bool) -> void:
-	SoundFx.toggle_sfx(toggled_on)
+	SoundFx.mute_sfx(!toggled_on)
 	SoundFx.button_click()
 
 #endregion
