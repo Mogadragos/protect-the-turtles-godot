@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bxds0kpdhjwqk"]
 
-[ext_resource type="Script" path="res://Scripts/options_menu.gd" id="1_3mmi8"]
-[ext_resource type="Theme" uid="uid://7f6ykoy6ljnn" path="res://Assets/UI/theme.tres" id="1_ikhgt"]
+[ext_resource type="Script" path="res://Scripts/options_menu.gd" id="1_3p4q3"]
+[ext_resource type="Theme" uid="uid://7f6ykoy6ljnn" path="res://Assets/UI/theme.tres" id="2_a5wio"]
 
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_3mmi8")
+script = ExtResource("1_3p4q3")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -37,7 +37,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_ikhgt")
+theme = ExtResource("2_a5wio")
 theme_override_font_sizes/font_size = 32
 text = "Options"
 horizontal_alignment = 1
@@ -56,19 +56,19 @@ theme_override_constants/separation = 40
 
 [node name="MusicButton" type="CheckButton" parent="MarginContainer/VBoxContainer/Audio/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_ikhgt")
+theme = ExtResource("2_a5wio")
 text = "        Music"
 alignment = 1
 
 [node name="SfxButton" type="CheckButton" parent="MarginContainer/VBoxContainer/Audio/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_ikhgt")
+theme = ExtResource("2_a5wio")
 text = "         Sounds"
 alignment = 1
 
 [node name="MenuButton" type="Button" parent="MarginContainer/VBoxContainer/Audio/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_ikhgt")
+theme = ExtResource("2_a5wio")
 text = "Menu"
 
 [connection signal="toggled" from="MarginContainer/VBoxContainer/Audio/VBoxContainer/MusicButton" to="." method="_on_music_button_toggled"]

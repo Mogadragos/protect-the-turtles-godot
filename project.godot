@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Protect The Turtles Godot"
-run/main_scene="res://Scenes/main_menu.tscn"
+run/main_scene="res://Scenes/UI/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-SoundFx="*res://Scenes/sound_fx.tscn"
+SoundFx="*res://Scenes/UI/sound_fx.tscn"
 
 [rendering]
 

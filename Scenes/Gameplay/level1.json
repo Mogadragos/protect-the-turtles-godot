@@ -1,0 +1,32 @@
+{
+	"waves": [
+		[
+			{
+				"level": 0,
+				"numbers": 10,
+				"interval": 0.25,
+				"delay": 0,
+			},
+			{
+				"level": 1,
+				"numbers": 5,
+				"interval": 0.3,
+				"delay": 3,
+			},
+		],
+		[
+			{
+				"level": 0,
+				"numbers": 30,
+				"interval": 0.2,
+				"delay": 0,
+			},
+			{
+				"level": 1,
+				"numbers": 10,
+				"interval": 0.25,
+				"delay": 5,
+			},
+		]
+	]
+}
