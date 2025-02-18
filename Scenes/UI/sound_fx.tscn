@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://x8ghscqkywf8"]
+[gd_scene load_steps=5 format=3 uid="uid://x8ghscqkywf8"]
 
 [ext_resource type="Script" path="res://Scripts/sound_fx.gd" id="1_of4y3"]
 [ext_resource type="AudioStream" uid="uid://d81qmb5lnvib" path="res://Assets/V2/SFX/UI_SFX/click.ogg" id="2_kq5ym"]
 [ext_resource type="AudioStream" uid="uid://dqdmwg71xdtk" path="res://Assets/V1/SFX/UI_SFX/click.mp3" id="3_1dc4k"]
+[ext_resource type="AudioStream" uid="uid://8orufvkxjqbi" path="res://Assets/V1/SFX/BGM.mp3" id="3_d3phh"]
 
 [node name="SoundFx" type="Node"]
 script = ExtResource("1_of4y3")
@@ -12,6 +13,11 @@ script = ExtResource("1_of4y3")
 [node name="ButtonClick" type="AudioStreamPlayer" parent="V1"]
 stream = ExtResource("3_1dc4k")
 bus = &"SFX"
+
+[node name="BGM" type="AudioStreamPlayer" parent="V1"]
+stream = ExtResource("3_d3phh")
+autoplay = true
+bus = &"Music"
 
 [node name="V2" type="Node" parent="."]
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxds0kpdhjwqk"]
+[gd_scene load_steps=4 format=3 uid="uid://bxds0kpdhjwqk"]
 
 [ext_resource type="Script" path="res://Scripts/options_menu.gd" id="1_3p4q3"]
 [ext_resource type="Theme" uid="uid://7f6ykoy6ljnn" path="res://Assets/UI/theme.tres" id="2_a5wio"]
+[ext_resource type="PackedScene" uid="uid://c87n8w4fiqsql" path="res://Scenes/UI/Components/volume_slider.tscn" id="3_eonrm"]
 
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3
@@ -54,23 +55,53 @@ size_flags_horizontal = 3
 size_flags_vertical = 6
 theme_override_constants/separation = 40
 
-[node name="MusicButton" type="CheckButton" parent="MarginContainer/VBoxContainer/Audio/VBoxContainer"]
+[node name="Master" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Audio/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_a5wio")
-text = "        Music"
-alignment = 1
 
-[node name="SfxButton" type="CheckButton" parent="MarginContainer/VBoxContainer/Audio/VBoxContainer"]
+[node name="MasterLabel" type="Label" parent="MarginContainer/VBoxContainer/Audio/VBoxContainer/Master"]
 layout_mode = 2
 theme = ExtResource("2_a5wio")
-text = "         Sounds"
-alignment = 1
+theme_override_font_sizes/font_size = 0
+text = "Master
+"
+horizontal_alignment = 1
+
+[node name="MasterVolume" parent="MarginContainer/VBoxContainer/Audio/VBoxContainer/Master" instance=ExtResource("3_eonrm")]
+layout_mode = 2
+bus_name = "Master"
+
+[node name="Music" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Audio/VBoxContainer"]
+layout_mode = 2
+
+[node name="MusicLabel" type="Label" parent="MarginContainer/VBoxContainer/Audio/VBoxContainer/Music"]
+layout_mode = 2
+theme = ExtResource("2_a5wio")
+theme_override_font_sizes/font_size = 20
+text = "Music
+"
+horizontal_alignment = 1
+
+[node name="MusicVolume" parent="MarginContainer/VBoxContainer/Audio/VBoxContainer/Music" instance=ExtResource("3_eonrm")]
+layout_mode = 2
+bus_name = "Music"
+
+[node name="SFX" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Audio/VBoxContainer"]
+layout_mode = 2
+
+[node name="SFXLabel" type="Label" parent="MarginContainer/VBoxContainer/Audio/VBoxContainer/SFX"]
+layout_mode = 2
+theme = ExtResource("2_a5wio")
+theme_override_font_sizes/font_size = 20
+text = "SFX"
+horizontal_alignment = 1
+
+[node name="SFXVolume" parent="MarginContainer/VBoxContainer/Audio/VBoxContainer/SFX" instance=ExtResource("3_eonrm")]
+layout_mode = 2
+bus_name = "SFX"
 
 [node name="MenuButton" type="Button" parent="MarginContainer/VBoxContainer/Audio/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_a5wio")
 text = "Menu"
 
-[connection signal="toggled" from="MarginContainer/VBoxContainer/Audio/VBoxContainer/MusicButton" to="." method="_on_music_button_toggled"]
-[connection signal="toggled" from="MarginContainer/VBoxContainer/Audio/VBoxContainer/SfxButton" to="." method="_on_sfx_button_toggled"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Audio/VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
