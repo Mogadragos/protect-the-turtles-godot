@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4onljfm7sql4"]
+
+[ext_resource type="Texture2D" uid="uid://du2thpnlw3366" path="res://Assets/V1/Sprites/Flame/Flame_1.png" id="1_qpev6"]
+
+[node name="FlameTower" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qpev6")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+
+[node name="Node" type="Node" parent="."]

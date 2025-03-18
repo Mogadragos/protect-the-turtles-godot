@@ -1,7 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://dimv8v1ixyglw"]
+[gd_scene load_steps=8 format=3 uid="uid://dimv8v1ixyglw"]
 
 [ext_resource type="Script" path="res://Scenes/Gameplay/enemy.gd" id="1_2b8yn"]
-[ext_resource type="Texture2D" uid="uid://dcwkuh1y525mq" path="res://icon.svg" id="2_3s2yg"]
+[ext_resource type="Texture2D" uid="uid://bjwg24tr23gbp" path="res://Assets/V1/Sprites/Braconnier/Braconnier_1.png" id="2_qwjob"]
+[ext_resource type="Texture2D" uid="uid://cqn7u0y3carjs" path="res://Assets/V1/Sprites/Braconnier/Braconnier_2.png" id="3_8jfsd"]
+[ext_resource type="Texture2D" uid="uid://bjdygjyq33qlj" path="res://Assets/V1/Sprites/Braconnier/Braconnier_3.png" id="4_38uvd"]
+[ext_resource type="Texture2D" uid="uid://pwa5ax11ci64" path="res://Assets/V1/Sprites/Braconnier/Braconnier_4.png" id="5_7tcwb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n7p65"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qwjob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8jfsd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_38uvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7tcwb")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0hc5"]
 size = Vector2(128, 128)
@@ -9,8 +32,13 @@ size = Vector2(128, 128)
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_2b8yn")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_3s2yg")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_n7p65")
+animation = &"walk"
+autoplay = "walk"
+frame = 3
+frame_progress = 0.454105
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_d0hc5")
