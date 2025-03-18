@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://f8c3hn5jdn1q"]
+
+[ext_resource type="Script" path="res://Scripts/Towers/flame_tower_bullet.gd" id="1_0tgap"]
+[ext_resource type="Texture2D" uid="uid://dcwkuh1y525mq" path="res://icon.svg" id="1_xhiiv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7q0rp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xhiiv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6142h"]
+radius = 13.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kbrws"]
+radius = 16.0312
+
+[node name="FlameTowerBullet" type="CharacterBody2D"]
+script = ExtResource("1_0tgap")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_7q0rp")
+frame_progress = 0.978433
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6142h")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_kbrws")
